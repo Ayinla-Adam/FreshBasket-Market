@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Landing page</title>
+<script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+	* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+@media(max-width: 1080px) {
+	html {
+		font-size: 50%;
+	}
+}
+
+body {
+	font-size: 1.6rem;
+}
+
+.header {
+	padding: 2rem 4rem;
+	border-bottom: 1px solid RGBa(0, 0, 0, .2);
+}
+
+
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+ul {
+	line-height: 1.5;
+}
+
+.nav ul{
+	list-style: none;
+	display: flex;
+	gap: 2rem;
+}
+
+.btn-primary {
+	width: fit-content;
+	text-decoration: none;
+	padding: 1rem;
+	color:  white;
+	border-radius: 5px;
+	background-color: green;
+}
+
+@media(max-width: 360px) {
+	.sign-in-btn {
+		display: none;
+	}
+
+	.btn-container {
+		flex-direction: column;
+	}
+}
+
+.section  {
+	padding: 6rem 4rem;
+	margin-top: 2rem;
+}
+
+.section--1 {
+	display: flex;
+	justify-content: space-between;
+}
+
+.hero--text {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	flex-basis: 50%;
+}
+
+.caption {
+	background-color: RGBa(0, 0,  0,  .2);
+	width: fit-content;
+	padding: 1rem;
+	border-radius: 20px;
+}
+
+.hero--text li {
+	list-style: none;
+}
+
+.list-icon {
+	color: green;
+}
+
+@media(max-width: 380px) {
+	.caption {
+		font-size: 1rem;
+	}
+
+	.text-container {
+		align-items: flex-start;
+	}
+}
+
+@media(max-width: 290px) {
+	.caption {
+		font-size: 0.9rem;
+	}
+}
+
+.btn-container {
+	display: flex;
+	gap: 3rem;
+}
+
+.btn-secondary {
+	width: fit-content;
+	text-decoration: none;
+	padding: 1rem;
+	border-radius: 5px;
+	background-color: white;
+	border: 1px solid black;
+	color: black;
+}
+
+.img--container {
+	align-self: center;
+}
+
+.img--container img {
+	border-radius: 10px;
+}
+
+
+@media(max-width: 1024px) {
+	.img--container img{
+		width: 300px;
+		height: 250px;
+	}
+}
+
+@media(max-width: 780px) {
+	.img--container {
+		display: none;
+	}
+
+	.hero--text {
+		flex-basis: 100%;
+	}
+
+	.nav ul {
+		display: none;
+	}
+}
+
+.section--2 {
+	display: flex;
+	flex-direction: column;
+	gap: 5rem;
+	background-color: lightblue;
+}
+
+.section--title {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.section--title h1 {
+	text-align: center;
+}
+
+.cards {
+	display: flex;
+	gap: 40px;
+}
+
+@media(max-width: 800px) {
+	.cards {
+		flex-wrap: wrap;
+	}
+}
+
+.card {
+	background-color: white;
+	width: 100%;
+	padding: 4rem 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+}
+
+.card .icon {
+	background: RGBa(0, 0, 0, .2);
+	width: fit-content;
+	padding: 1rem;
+	border-radius: 5px;
+}
+
+.card .icon i {
+	color: green;
+}
+
+.section--3 {
+	display: flex;
+	flex-direction: column;
+	gap: 5rem;
+}
+
+.section--3 .card{
+	border: 1px solid RGBa(0, 0, 0, .2);
+}
+
+.footer {
+	background-color: lightblue;
+	padding: 6rem 4rem;
+}
+
+.text-container {
+	background-color: green;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	font-size: 1.8rem;
+	color: white;
+	padding: 6rem 4rem;
+	border-radius: 8px;
+	text-align: center;
+}
+
+.text-container p {
+	line-height: 1.5;
+	padding: 0 28rem;
+}
+
+@media(max-width: 900px) {
+	.text-container p {
+		padding: 0;
+	}
+
+	.footer {
+		padding: 0;
+		
+	}
+
+	.text-container {
+		border-radius: 0;
+	}
+}
+
+@media(max-width: 450px) {
+	.text-container {
+		font-size: 1.2rem;
+	}
+}
+
+/* @media(max-width: 270px) {
+	.section--title {
+		align-items: flex-start;
+		text-align: left;
+	}
+} */
+
+@media(max-width: 290px) {
+	.section--title {
+		align-items: flex-start;
+		font-size: 1.2rem;
+		text-align: left;
+	}
+}
+
+.logo-wrapper {
+	display: flex;
+}
+
+.icon-logo {
+	color: green;
+	font-size: 30px;
+}
+</style>
+
+</head>
+<body>
+	<header class="header">
+		<nav class="nav">
+			<div class="logo-wrapper">
+				<i class="ph ph-basket icon-logo"></i>
+				<h1>FreshBasket Market</h1>
+			</div>
+
+			<ul>
+				<li>How it works</li>
+				<li>Shop by aisle</li>
+				<li>Why customers love us</li>
+			</ul>
+
+			<a href="" class="btn-primary sign-in-btn">Sign in</a>
+		</nav>
+	</header>
+
+	<section class="section section--1">
+		<div class="hero--text">
+			<div class="caption">
+				<p>Same day groceries delivery in your neighborhood</p>
+			</div>
+
+			<h1>All your weekly food shopping, delivered in one simple order</h1>
+
+			<p>
+				FreshBasket Market connects you to trusted local markets and supermarkets. So you can stock up on fresh produce, pantry staples and
+				household essentials without leaving home.
+			</p>
+
+			<ul>
+				<li><span><i class="ph ph-check-circle list-icon"></i></span> Order before 4pm for free same-day delivery in eligible areas</li>
+				<li><span><i class="ph ph-check-circle list-icon"></i></span> Real time stock form partner stores so you only see what is available</li>
+				<li><span><i class="ph ph-check-circle list-icon"></i></span> Secure checkout with saved addresses and payment methods</li>
+			</ul>
+
+			<div class="btn-container">
+				<a href="" class="btn-primary">Start your first order</a>
+				<a href="" class="btn-secondary">View how it works</a>
+			</div>
+		</div>
+
+		<div class="img--container">
+			<img src="./vegetables.jpg" alt="vegetables" width="400" height="300"/>
+		</div>
+	</section>
+
+	<section class="section section--2">
+		<div class="section--title">
+			<h1>How FreshBasket Market works</h1>
+			<p>From browsing to delivery, we make weekly shopping simple and predictible</p>
+		</div>
+
+		<div class="cards">
+			<div class="card">
+				<div class="icon">
+					<i class="ph ph-magnifying-glass"></i>
+				</div>
+
+				<h3>1. Browse local stores</h3>
+
+				<p>Enter your address to see nearby supermarkets and open-air markets. Filter by price, distance, or specialty products</p>
+			</div>
+
+			<div class="card">
+				<div class="icon">
+					<i class="ph ph-shopping-cart-simple"></i>
+				</div>
+
+				<h3>2. Fill your basket</h3>
+
+				<p>Add fresh produce, grain, meat, snacks and household items. See live totals, delivery windows and substitution options.</p>
+			</div>
+
+			<div class="card">
+				<div class="icon">
+					<i class="ph ph-motorcycle"></i>
+				</div>
+
+				<h3>3. Track your delivery</h3>
+
+				<p>Our shoppers pick and pack your order carefully. Follow your rider on the map and receive updates until it reaches your door</p>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="section section--3">
+		<div class="section--title">
+			<h1>Everything you need in one place</h1>
+			<p>Shop across aisles just like a physical supermarket, but without waiting in line</p>
+		</div>
+
+		<div class="cards">
+			<div class="card">
+				<h3>Fresh fruit & vegetables</h3>
+				<p>Crisp, lettuce, ripe tomatoes, seasonal fruits, herbs and more sourced daily from partner farms and markets</p>
+
+				<ul>
+					<li>Hand-selected produce with quality checks before dispatch</li>
+					<li>Seasonal bundles designed for soups, salads and air-fries</li>
+				</ul>
+			</div>
+
+			<div class="card">
+				<h3>Pantry & dry goods</h3>
+				<p>Stock up on rice, pasta, beans, flour, spices, tinned foods and everyday cooking essentials from trusted brands.</p>
+
+				<ul>
+					<li>Bulk and family-size options to help you save on weekly staples.</li>
+					<li>Clear labelling for dietary needs such as gluten-free or vegan</li>
+				</ul>
+			</div>
+
+			<div class="card">
+				<h3>Diary, meat & frozen</h2>
+
+				<p>From milk, yoghurt and cheese to pultry, seafood and frozen vegetables, keep your fridge and freezer fully stocked.</p>
+
+				<ul>
+					<li>Temperature-controlled delivery to protect sensitive items.</li>
+					<li>Easy re-ordering of your fridge favourites in one tap</li>
+				</ul>
+			</div>
+	</section>
+
+		<footer class="footer">
+
+		<div class="text-container">
+			<h1>Ready to simplify your grocery shopping</h1>
+
+			<p>Create a FreshBasket Market account save your usual items and delivery addresses, and complete you next weekly shop in under ten minutes</p>
+
+			<a href="" target="_blank" class="btn-secondary">Create a free account</a>
+		</div>
+	</footer>
+</body>
+</html>
