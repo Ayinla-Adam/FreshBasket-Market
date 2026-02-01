@@ -58,9 +58,14 @@ ul {
 }
 
 @media(max-width: 360px) {
-	.btn-container {
-		flex-direction: column;
+    .btn-container {
+        flex-direction: column;
 	}
+    
+        .header {
+            padding-left: 0;
+            padding-right: 0;
+        }
 }
 
 .section  {
@@ -276,6 +281,8 @@ ul {
 
 .logo-wrapper {
 	display: flex;
+    gap: 5px;
+    align-items: center;
 }
 
 .icon-logo {
